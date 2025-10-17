@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas style="border: 1px solid black" id="mycanvas" height ="800" width = "1200">
+</body>
+<script src="turtle.js"></script>
+<script defer>
+  //Get the canvas from the body
+  const canvas = document.getElementById("mycanvas");
+  const p = new Turtle(canvas);
+
+p.right(270);
+p.forward(300);
+p.right(90);
+p.forward(50);
+p.penDown = true;
+Square(200);
+p.penDown = false;
+p.forward(320);
+p.penDown = true;
+Circle(100);
+p.penDown = false;
+p.forward(200);
+p.penDown = true;
+  Flower(50, 12);
+  function Square(size){
+    for(let i = 0; i < 4; i++){
+      p.forward(size);
+      p.right(90);
+    }
+  }
+	
+  function Circle(radius){
+    for(let i = 0; i < 360; i++){
+      p.forward(2 * Math.PI * radius / 360);
+      p.right(1);
+    }
+  }
+  function Flower(petalRadius, petalCount){
+    for(let i = 0; i < petalCount; i++){
+      Circle(petalRadius);
+      p.right(360 / petalCount);
+    }
+  }
+
+</script>
+</html>
