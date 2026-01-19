@@ -8,20 +8,20 @@ g.fillRect(0, 0, 1000, 1000);
 g.fillStyle = "green";
 
 g.beginPath();
-g.moveTo(150, 100);
+/*g.moveTo(150, 100);
 g.lineTo(150, 700);
 g.lineTo(850, 700);
 g.lineTo(850, 100);
 g.lineTo(725, 300);
 g.lineTo(800, 500);
-g.lineTo(500, 900);
+g.lineTo(500, 900);*/
 g.lineTo(600, 700);
 g.lineTo(500, 150);
 g.lineTo(400, 700);
-g.lineTo(500, 900);
+/*g.lineTo(500, 900);
 g.lineTo(200, 500);
 g.lineTo(275, 300);
-g.lineTo(150, 100);
+g.lineTo(150, 100);*/
 g.closePath();
 
 g.fill();
@@ -60,3 +60,11 @@ function drawTriangle(x1, y1, x2, y2, x3, y3, fillColor, strokeColor = 'black') 
 }
 
 drawTriangle(500, 125, 470, 250, 530, 250, '#ffd700', '#b8860b');
+
+const timer = document.getElementById('timer');
+        const release = new Date("December 25, 2024 00:00:00").getTime();
+        const now = new Date().getTime();
+        const difference = release - now;
+      setInterval(() => {
+         
+      }, interval); console.log(difference);
